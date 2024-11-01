@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import Leaderboard from "./components/Leaderboard"
+import CodewarsLink from "./components/CodewarsLink";
 
 function App() {
   const createElement = (content, tag = "div", props = {}) => {
@@ -18,12 +19,14 @@ function App() {
   };
 
   const leaders = ["Oliver", "Amelia", "Liam", "Sophia", "Ethan", "Ava", "Mason", "Isabella", "Lucas", "Blake"]
+  const username = "Antony";
 
   return (
     <div className="App">
-      {createElement("Grocery List")}
+      {createElement("Grocery List",)}
       {createUnorderedList(["apples", "oranges", "bananas"])}
       <Leaderboard leaders={leaders}/>
+      <CodewarsLink user={username}/>
     </div>
   );
 }
